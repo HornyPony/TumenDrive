@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tumen_Drive</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_search">Search</string>
+    <string name="text_expected_rides">Expected Rides</string>
+    <string name="text_requests">Requests</string>
+    <string name="text_companion_name">Name</string>
+    <string name="text_add">Add</string>
+    <string name="text_deny">Deny</string>
+    <string name="text_ride_distance">Ride Distance:</string>
+    <string name="text_location">Location:</string>
+    <string name="text_time">Time:</string>
+</resources>
