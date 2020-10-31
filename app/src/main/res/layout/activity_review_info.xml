@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".Review.ReviewInfoActivity">
+
+        <TextView
+            android:id="@+id/messageNumberTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сообщение #45-49-001208/20-"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/addressTextTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Адрес:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/messageNumberTV"
+            app:layout_constraintTop_toBottomOf="@+id/messageNumberTV" />
+
+        <TextView
+            android:id="@+id/addressTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="ул. Николая Чаплина, д 117"
+            app:layout_constraintStart_toEndOf="@+id/addressTextTV"
+            app:layout_constraintTop_toTopOf="@+id/addressTextTV" />
+
+        <TextView
+            android:id="@+id/statusTextTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Статус:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/addressTextTV"
+            app:layout_constraintTop_toBottomOf="@+id/dateTV" />
+
+        <TextView
+            android:id="@+id/statusTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Заявка принята"
+            app:layout_constraintStart_toEndOf="@+id/statusTextTV"
+            app:layout_constraintTop_toTopOf="@+id/statusTextTV" />
+
+        <TextView
+            android:id="@+id/supportedTextTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Поддержало:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/statusTextTV"
+            app:layout_constraintTop_toBottomOf="@+id/statusTV" />
+
+        <TextView
+            android:id="@+id/supportedTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="1 человек"
+            app:layout_constraintStart_toEndOf="@+id/supportedTextTV"
+            app:layout_constraintTop_toTopOf="@+id/supportedTextTV" />
+
+        <TextView
+            android:id="@+id/gradeTextTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Оценка:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/statusTextTV"
+            app:layout_constraintTop_toBottomOf="@+id/supportedTV" />
+
+        <TextView
+            android:id="@+id/gradeTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/gradeTextTV"
+            app:layout_constraintTop_toTopOf="@+id/gradeTextTV" />
+
+        <TextView
+            android:id="@+id/dateTextTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Дата:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/addressTextTV"
+            app:layout_constraintTop_toBottomOf="@+id/addressTextTV" />
+
+        <TextView
+            android:id="@+id/dateTV"
+            style="@style/baseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="20-10-2020"
+            app:layout_constraintStart_toEndOf="@+id/dateTextTV"
+            app:layout_constraintTop_toTopOf="@+id/dateTextTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#4280C1"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gradeTextTV">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/myReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    style="@style/baseTextView"
+                    android:gravity="center_horizontal"
+                    android:text="Ваш отзыв"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/myReviewDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="me"
+                    android:text="Доброго времени есть ли планы по организации велодорожек по улицам Н.Чаплина-Молодежная-30 лет победы- Мельникайте. Место для их организации есть, а вот очень большой отрезок времени району внимание не уделяется. Спасибо."
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myReview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/administrationCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#42C166"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/administrationReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    style="@style/baseTextView"
+                    android:textStyle="bold"
+                    android:text="Официальный ответ"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Департамент дорожной инфраструктуры и транспорта
+01.09.2020
+Уважаемый Евгений!
+По Вашему вопросу сообщаю, по состоянию на 01.09.2020 проектная документация на устройство велосипедных дорожек по ул. Н. Чаплина, ул. Моложежная, ул. 30 лет Победы, ул. Мельникайте на участке от ул. 30 лет Победы до ул. Федюнинского не разрабатывалась.
+Директор департамента дорожной инфраструктуры и транспорта И. С. Фролов"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/administrationReview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

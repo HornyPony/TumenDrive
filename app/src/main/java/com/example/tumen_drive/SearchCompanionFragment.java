@@ -47,15 +47,15 @@ public class SearchCompanionFragment extends Fragment {
         companionList = new ArrayList<>();
 
         recyclerView = view.findViewById(R.id.companionsRecyclerView);
-        companionList.add(new Companion("Ivan", 4, 6, 43, "Советский",
-                        "Площадь свободы, Корстон, ЦПКиО им. Горького", "3 часа"));
-        companionList.add(new Companion("Ivan", 4, 6, 43, "Советский",
-                "Площадь свободы, Корстон, ЦПКиО им. Горького", "3 часа"));
-        companionList.add(new Companion("Ivan", 4, 6, 43, "Советский",
-                "Площадь свободы, Корстон, ЦПКиО им. Горького", "3 часа"));
-        companionList.add(new Companion("Ivan", 4, 6, 43, "Советский",
-                "Площадь свободы, Корстон, ЦПКиО им. Горького", "3 часа"));
-        companionAdapter = new CompanionAdapter(companionList);
+        companionList.add(new Companion("Витя", 2, 3, 6, "Центральный",
+                        "Хочу проехаться по Профсоюзной", "16:35"));
+        companionList.add(new Companion("Алена", 2, 3, 12, "Центральный",
+                "Хочу проехаться по району, заценить велодорожки", "19:35"));
+        companionList.add(new Companion("Артем", 4, 7, 20, "Ленинский",
+                "Ищу друзей для постоянных вело-прогулок", "20:35"));
+        companionList.add(new Companion("Алексей", 1, 6, 12, "Центральный",
+                "На Профсоюзной открыли новые вело-дорожки. Заценим?", "17:35"));
+        companionAdapter = new CompanionAdapter(companionList, SearchCompanionFragment.class.toString());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(companionAdapter);
     }

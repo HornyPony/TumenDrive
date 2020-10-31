@@ -8,6 +8,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -105,12 +106,7 @@
                     app:layout_constraintStart_toEndOf="@+id/timeTextTV"
                     app:layout_constraintTop_toTopOf="@+id/timeTextTV" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="#E60B0B"
-                    app:layout_constraintTop_toBottomOf="@id/timeTextTV"
-                    />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -135,5 +131,13 @@
             android:text="@string/text_deny"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <View
+            android:id="@+id/dividerItem"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#E60B0B"
+            app:layout_constraintTop_toBottomOf="@id/Accept"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

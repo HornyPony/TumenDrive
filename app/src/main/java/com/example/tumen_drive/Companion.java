@@ -16,9 +16,9 @@ class Companion {
                      String places, String time){
 
         this.companionName = companionName;
-        this.companionsAmount = (companionsRealAmount) +"/" + (companionsMaxAmount) + " companions";
-        this.rideDistance = rideDistance + " km";
-        this.location = vicinity + " " + places;
+        this.companionsAmount = (companionsRealAmount) +"/" + (companionsMaxAmount) + " попутчиков";
+        this.rideDistance = rideDistance + " км";
+        this.location = vicinity + "; " + places;
         this.time = time;
     }
 

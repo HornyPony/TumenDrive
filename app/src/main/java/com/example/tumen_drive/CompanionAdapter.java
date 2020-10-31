@@ -17,8 +17,10 @@ import java.util.List;
 
 class CompanionAdapter extends RecyclerView.Adapter<CompanionAdapter.ViewHolder> {
     private List<Companion> companionList;
+    private String fragment;
 
-    CompanionAdapter(List<Companion> companionList){
+    CompanionAdapter(List<Companion> companionList, String fragment){
+        this.fragment = fragment;
         this.companionList = companionList;
     }
 
@@ -38,8 +40,13 @@ Companion companion = companionList.get(position);
         holder.rideDistanceTV.setText(companion.getRideDistance());
        holder.locationTV.setText(companion.getLocation());
         holder.timeTV.setText(companion.getTime());
-        holder.addButton.setVisibility(View.GONE);
-        holder.denyButton.setVisibility(View.GONE);
+
+        if(!(fragment.equals(CompanionsRequestsFragment.class.toString()))) {
+            holder.addButton.setVisibility(View.GONE);
+            holder.denyButton.setVisibility(View.GONE);
+        } else {
+            holder.divider.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -53,6 +60,7 @@ Companion companion = companionList.get(position);
 
         final TextView companionNameTV, companionsAmountTV, rideDistanceTV, locationTV, timeTV;
         private Button addButton, denyButton;
+        private View divider;
         public ViewHolder(CompanionItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
@@ -64,6 +72,7 @@ Companion companion = companionList.get(position);
             timeTV = binding.timeTV;
             addButton = binding.Accept;
             denyButton = binding.Deny;
+            divider = binding.dividerItem;
         }
     }
 }
